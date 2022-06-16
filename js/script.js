@@ -7,39 +7,44 @@
 // * Dividete in piccoli problemi la consegna.
 // * Individuate gli elementi di cui avete bisogno per realizzare il programma.
 
+// variabile che salva lescelte dell'utente
+let userChoice;
+let userNumberArray = [];
+let numberOk = [];
+
 // evoco la funzione che genera 5 numeri random in array
-let generateNumberUser = alert(generateNumber (5, 1, 100));
+let generateNumberUser = generateNumber (5, 1, 100);
+alert(generateNumberUser);
 console.log('numeri random',generateNumber)
+
+
 
 // la funzione partirà solo dopo x s
 setTimeout (startPlay, 1000)
-let userChoice;
-let userNumberArray = [];
-console.log(userNumberArray)
+
+
+// funzione che ritarda la comparsa del prompt
 function startPlay(){
+    // generateNumberUser = alert(generateNumber (5, 1, 100));
+    console.log(generateNumberUser)
+
     for(let i = 0; i < 5 ; i++){
     // console.log([i])
     userChoice = parseInt (prompt('Scrivi un numero da 1 a 100'));
-    console.log(userChoice) 
+    console.log(userChoice);
+
+    // se il numero scelto dall'utente non è presente nell'array pusha
+    if(!userNumberArray.includes(userChoice) && generateNumberUser.includes(userChoice)){
+
+        userNumberArray.push(userChoice);
+        console.log(userNumberArray)
+    }
+    console.log(userNumberArray)
     }
 
-   for(i = 0; i < generateNumber.length; i++){
-  
-        
-        if(!userNumberArray.includes(userChoice)){
-            userNumberArray.push(userChoice);
-        }
-        
-    }
-    
-
-    
-   
 }
 
-
-
-
+   
 // creo la funzione
 function generateNumber (numberOfNumber, numMin, rangeMax){
     // creo un array vuoto dove inserire i numeri che verrnno generati
@@ -61,9 +66,11 @@ function generateNumber (numberOfNumber, numMin, rangeMax){
     return numberGenerateArray
    
 
-    // creo una funzione che generi numeri random
-    function getRndInteger(min, max) {
-        return Math.floor(Math.random() * (max - min + 1) ) + min;
-    }
+    
+}
+
+// creo una funzione che generi numeri random
+function getRndInteger(min, max) {
+    return Math.floor(Math.random() * (max - min + 1) ) + min;
 }
 
