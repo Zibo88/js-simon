@@ -20,7 +20,7 @@ console.log('numeri random',generateNumber)
 
 
 // la funzione partirà solo dopo x s
-setTimeout (startPlay, 1000)
+setTimeout (startPlay, 30000)
 
 
 // funzione che ritarda la comparsa del prompt
