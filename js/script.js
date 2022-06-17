@@ -20,13 +20,11 @@ console.log('numeri random',generateNumber)
 
 
 // la funzione partirà solo dopo x s
-setTimeout (startPlay, 30000)
+setTimeout (startPlay, 1000)
 
 
 // funzione che ritarda la comparsa del prompt
 function startPlay(){
-    // generateNumberUser = alert(generateNumber (5, 1, 100));
-    console.log(generateNumberUser)
 
     for(let i = 0; i < 5 ; i++){
     // console.log([i])
@@ -40,9 +38,17 @@ function startPlay(){
         console.log(userNumberArray)
     }
     console.log(userNumberArray)
+    
     }
 
+    alert('Hai indovinato: '+ userNumberArray)
+    
+
+   
+
 }
+
+
 
    
 // creo la funzione
