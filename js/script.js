@@ -41,7 +41,7 @@ function startPlay(){
     
     }
 
-    alert('Hai indovinato: '+ userNumberArray)
+    alert(`'Hai indovinato: '${userNumberArray.length} numeri,  i numeri indovinati sono: ${userNumberArray}`)
     
 
    
